@@ -1,0 +1,29 @@
+@use "variaveis";
+
+.trailers{
+    
+    &__titulo{
+        text-align: center;
+
+        &__versoes{
+            text-align: center;
+            padding: 20px;
+        }
+    }
+
+    &__versao{
+        margin-top: 26px;
+        text-align: center;
+
+        &__trailer{
+
+            &__tobey, &__andrew, &__tom{
+                padding: 10px;
+
+                @media (max-width: 768px){
+                    width: 90vw;
+                }
+            }
+        }
+    }
+}

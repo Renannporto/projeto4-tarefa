@@ -1,0 +1,76 @@
+@use "variaveis";
+
+.footer{
+  margin: 5.6vw;
+
+    &__container{
+      max-width: 1246px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+
+      @media (max-width: 768px){
+        display: block;
+        text-align: center;
+      }
+
+      .social-icons{
+        h3{
+          padding-bottom: 20px;
+        }
+
+        .icon{
+          padding-right: 10px;
+          font-size: 40px;
+        }
+      }
+    }
+
+    &__links{
+      display: inline;
+
+      &__item{
+        
+        a{
+          text-decoration: none;
+          padding: 8px 16px;
+
+          &:hover{
+              color: variaveis.$corVersaoTitulo;
+          }
+        }
+      }
+    }
+
+
+    .language-selector{
+      display: flex;
+      align-items: center;
+      padding: 8px;
+
+      @media (max-width: 768px){
+        justify-content: center;
+      }
+    
+      img{
+          height: 18px;
+          width: 18px;
+      }
+
+      select{
+        background-color: transparent;
+        border: none;
+        color: variaveis.$corTexto;
+        height: 38px;
+
+        &:hover{
+            color: variaveis.$corVersaoTitulo;
+        }
+
+        option{
+            color: variaveis.$corFundo;
+        }
+      }
+    }
+}

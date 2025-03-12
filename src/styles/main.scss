@@ -1,0 +1,59 @@
+@use "variaveis";
+@use "header";
+@use "hero";
+@use "fotografias";
+@use "sass:color";
+@use "filmes";
+@use "trailers";
+@use "footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Quicksand", serif;
+    color: variaveis.$corTexto;
+}
+
+body {
+    background-color: variaveis.$corFundo;
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTexto;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variaveis.$corTexto;
+}
+
+.title--small{
+    @include title(28px);
+}
+
+.title{
+    @include title;
+}
+
+.title--big{
+    @include text(50px);
+}
+
+.text--small{
+    @include text(26px);
+    @media (max-width: 768px){
+        @include text(16px);
+    }
+}
+
+.text{
+    @include text;
+}
+
+.text--big{
+    @include text(40px)
+}

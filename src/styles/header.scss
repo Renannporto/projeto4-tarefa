@@ -1,0 +1,63 @@
+@use "variaveis";
+
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+    background-color: variaveis.$corFundo;
+
+    &__logo{
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.menu{
+    &__container{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+
+        &__item{
+            a{
+                text-decoration: none;
+                color: variaveis.$corTexto;
+                transition: 0.3s;
+
+                &:hover{
+                    color: variaveis.$corVersaoTitulo;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        display: block;
+        text-align: center;
+
+        .menu{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 1180px){
+    .header{
+        display: block;
+        text-align: center;
+
+        .menu{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}
